@@ -69,10 +69,10 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   let url: any = ""
   document.dm_directoryParents.map((i: any) => {
     
-    if (i.meta.entityType.id == 'ce_country') {
-      url = `${i.slug}`
-    }
-    else if (i.meta.entityType.id == 'ce_region') {
+    // if (i.meta.entityType.id == 'ce_country') {
+    //   url = `${i.slug}`
+    // }
+     if (i.meta.entityType.id == 'ce_region') {
       url = `${url}/${i.slug}/${document.slug.toString()}`
     }
   })
@@ -150,8 +150,17 @@ const City: Template<TemplateRenderProps> = ({
     } else {
       origin = entity.address.country;
     }
+
+
+    
     // let key: any = Object.keys(entity.hours)[0];
     let url = "";
+    dm_directoryParents.map((i: any, index: any) => {
+      if (i.meta.entityType.id == 'ce_region') {
+        url=`${url}/${i.slug}/${document.slug.toString()}`
+        console.log(url,"urlnew")
+      }
+    });
     const name: any = entity.name.toLowerCase();
     const region: any = entity.address.region.toLowerCase();
     const initialregion: any = region.toString();
@@ -159,13 +168,13 @@ const City: Template<TemplateRenderProps> = ({
     const city: any = entity.address.city.toLowerCase();
     const initialrcity: any = city.toString();
     const finalcity: any = initialrcity.replaceAll(" ", "-");
-    const string: any = name.toString();
+    const string: any = entity.address.line1.toLowerCase();
     const result: any = string.replaceAll(" ", "-");
     const finalresult: any = constant.slugify(result);
     if (!entity.slug) {
-      url = `${region}/${entity.id}-${finalresult}`;
+      url = `${region}/${city}/${finalresult}`;
     } else {
-      url = `${region}/${constant.slugify(entity.slug)}`;
+      url = `${region}/${city}/${constant.slugify(entity.slug)}`;
     }
     const metersToMiles = (meters: number) => {
       const miles = meters * 0.000621371;
