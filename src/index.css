@@ -1,0 +1,1381 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@media (min-width: 768px) {
+	html { @apply  text-[80%]}
+}
+
+@media (min-width: 1024px) {
+	html { @apply  text-[85%]}
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNa7lqDY.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xK3dSBYKcSV-LCoeQqfX1RYOo3qPK7lqDY.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNK7lqDY.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xK3dSBYKcSV-LCoeQqfX1RYOo3qO67lqDY.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xK3dSBYKcSV-LCoeQqfX1RYOo3qN67lqDY.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lqDY.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmhduz8A.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwkxduz8A.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmxduz8A.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlBduz8A.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmBduz8A.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmRduz8A.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Regular.woff2') format('woff2'),
+      url('./fonts/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Bold.woff2') format('woff2'),
+      url('./fonts/Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@media screen and (min-width: 1280px) {
+	html {@apply  text-[100%]	}
+}
+a{ @apply focus:outline-none focus-visible:outline-none}
+body{ @apply font-main-font text-sm md:text-base text-black overflow-x-hidden}
+h1 {@apply text-4xl font-normal;}
+h2 {  @apply text-2xl font-normal;}
+.centered-container {  @apply mx-auto px-5 md:px-14 max-w-screen-xl;}
+.container-lg{  @apply mx-auto px-5 md:px-14 max-w-[120rem];}
+.container-custom{ @apply max-w-[100rem] mx-auto px-4 lg:px-6}
+.container-custom1{ @apply max-w-[90.75rem] mx-auto px-4 lg:px-6}
+.container{ @apply px-4 lg:px-5 max-w-full xl:max-w-screen-xl 2xl:max-w-screen-2xl}
+#root{  @apply flex flex-col min-h-screen}
+.section { @apply mt-8 mb-16;}
+.primary-cta { @apply bg-Dark-red hover:bg-red;}
+.secondary-cta { @apply bg-Dark-red hover:bg-red;}
+.image { @apply rounded-xl drop-shadow-md;}
+.image:hover { transform: scale(1.02);  transition-duration: 0.3s;  cursor: pointer;}
+.social-link { @apply text-black flex gap-x-3  hover:cursor-pointer;}
+.card {  @apply rounded-xl drop-shadow-md;}
+.card:hover {  transform: scale(1.02);  transition-duration: 0.3s;  cursor: pointer;}
+.pagination-conatiner button[disabled]{  @apply hidden  }
+nav[aria-label="Pagination"] button{  @apply rounded-none  border-red}
+nav[aria-label="Pagination"] button:hover, nav[aria-label="Pagination"] button.bg-primary-light{  @apply bg-red text-white}
+nav[aria-label="Pagination"] button:disabled{  @apply cursor-not-allowed text-opacity-60 bg-opacity-60}
+nav .active{ @apply bg-light-red}
+.selectedLabel{@apply block}
+
+/* Header */
+.site-header{   @apply pt-4 relative}
+.site-header .header-top{  @apply text-nav-link pt-0 md:pt-8 pb-4}
+.site-header .header-top .logo svg{  @apply w-auto min-w-[7.563rem] min-h-[3.813rem]}
+.site-header .header-top .logo img{  @apply w-36 h-14 lg:h-auto  lg:w-[14.625rem] mx-auto lg:ml-0}
+.site-header .container{  @apply flex flex-row justify-between}
+.site-header .right-menu{ @apply hidden}
+.site-header .right-menu ul{  @apply flex items-center}
+.site-header .right-menu ul li{  @apply border-l-2 border-right-menu-b first:border-l-0}
+.site-header .right-menu ul li{  @apply text-nav-link}
+.site-header .main-nav{  @apply text-[.92857rem] lg:text-sm uppercase text-black lg:text-nav-link relative z-[999] block bg-bg-primary}
+.site-header .main-nav ul{  @apply flex items-start justify-start  lg:items-center lg:justify-around leading-[3.125rem] w-full pt-[3.125rem] lg:pt-0}
+.site-header .main-nav ul li{ @apply w-full border-t  border-nav-li-border lg:border-t-0 lg:w-auto }
+.site-header .main-nav ul li:nth-child(2){@apply ml-0 lg:ml-2.5 }
+.site-header .main-nav ul li:nth-child(12) a{  @apply text-red}
+.site-header .main-nav ul li a{  @apply inline-block w-full align-top relative text-[#02a6db] lg:text-black font-bold capitalize !text-[0.938rem]  py-0 px-4 lg:px-0 2xl:px-3 hover:bg-black hover:text-white}
+.logo{@apply w-full text-center }
+.logo-inner{@apply max-w-[9.375rem] mr-0 ml-auto sm:mx-auto lg:mx-0  lg:max-w-[14.375rem] }
+.logo svg{@apply  mx-auto lg:mx-0  }
+.store-inner img {@apply w-8 lg:w-[2.063rem] !h-8 md:h-[2.188rem]}
+
+body.menu-opened{ @apply overflow-hidden lg:overflow-auto;}
+.menu-opened .hdr-right ul{  @apply right-0}
+.menu-opened{  @apply overflow-hidden lg:overflow-visible}
+.menu-btn{  @apply z-[9999] absolute left-4 top-3 lg:top-6 lg:hidden text-[0.5625rem] uppercase leading-none;}
+.menu-btn svg{  @apply w-8 mx-auto mb-1}
+.menu-btn svg.close{  @apply hidden}
+/* .menu-opened .menu-btn svg.humburger-i{  @apply hidden} */
+.menu-opened .menu-btn svg.close{  @apply hidden  h-6 w-6}
+.top-hdr-links{ @apply flex px-0 sm:px-3 mx-3 mt-4 float-right pr-0}
+.top-hdr-links li{ @apply border-r border-box-border last:border-none }
+.top-hdr-links li a{ @apply hover:text-red }
+/* .main-nav ul.primary-nav{  @apply flex  lg:flex-row flex-wrap fixed lg:relative -left-full lg:left-auto top-0 lg:top-auto bottom-0 
+  lg:bottom-auto bg-white lg:bg-transparent z-50 lg:z-auto w-5/6 md:w-2/5  lg:w-auto max-w-full sm:max-w-full lg:max-w-none 
+  overflow-x-hidden overflow-y-auto lg:overflow-visible transition-all ease-in-out duration-200 lg:-ml-2.5;}
+.menu-opened .main-nav ul.primary-nav{  @apply left-0}
+.menu-opened .main-nav{ @apply lg:before:content-none before:fixed  before:left-0 before:right-0 before:top-0 before:bottom-0 before:bg-black before:bg-opacity-20  } */
+.menu-opened .site-header .main-nav ul li a{@apply font-bold}
+.middle-head button#menu-btn{@apply static pr-5}
+
+
+
+
+/* 27-03-23  */
+
+.trustpilot-widget{@apply text-center mb-2 md:mb-0 md:!float-right !max-w-[auto] }
+.middle-head{@apply flex justify-between}
+.search-bar{@apply px-2 lg:px-[3.313rem] max-w-[auto] lg:max-w-[32.875rem] ml-0 sm:ml-10 mt-0 sm:mt-6 relative bg-bg-blue sm:bg-transparent}
+.link-left{@apply flex justify-end w-auto sm:w-full}
+.search-bar input {@apply h-[2.5rem] border border-bg-primary rounded}
+.search-bar button.btn-search {@apply bg-search_icon h-[2.375rem] w-[3rem] absolute right-2  lg:right-[3.125rem] top-[0.625rem] sm:top-0 bg-no-repeat bg-center}
+.nav-search-wrapper {@apply bg-[#004986] p-[0.625rem] w-full relative}
+
+
+.site-header .header-top .top-hdr-links li {@apply flex}
+.top-hdr-links a {@apply text-sm text-black font-bold hidden lg:block}
+
+
+
+.store-inner {@apply pt-0 pl-[15px] w-auto min-h-[37px] text-left relative text-[#1e293e] mx-0 flex gap-2}
+.company-info-footer {@apply block md:flex items-center justify-between pt-2 pb-5}
+footer.site-footer .store-inner img {@apply w-auto}
+.store-inner .ki {@apply text-[2rem]}
+footer.site-footer .cta-list a.Link {@apply text-[0.688rem] text-[#e9e9e9] mr-3}
+
+
+/* loading */
+.react-loading-skeleton{@apply !w-full}
+.map-section span div {@apply !p-0 -mt-2}
+
+
+
+
+/* banner sec */
+.banner-sec{ @apply bg-gray-light py-16 mt-4}
+.banner-sec h1{ @apply text-3xl text-center uppercase }
+.locator-main{ @apply my-6 md:my-10  align-bottom w-full mx-auto !px-5 md:px-10 inline-block}
+.left-listing{ @apply w-full md:w-[26rem] lg:w-[28.75rem] float-left }
+.map-section{@apply w-full md:w-[calc(100%_-_26rem)] lg:w-[calc(100%_-_28.75rem)] !pl-0 md:!pl-4 lg:pl-8 float-right}
+.locator-map-block{  @apply w-full  h-[80vh] md:h-screen top-0 order-1 lg:order-none z-[99];}
+.hero-section .hero-content .banner-text.banner-dark-bg{ @apply  border-l-0 inline-block flex flex-col items-center p-4  rounded-lg backdrop-blur-sm bg-Dark-red mx-auto w-[340px] sm:w-[500px] px-2.5 text-center}
+.hero-section .hero-content .banner-text.banner-dark-bg h1{  @apply text-2xl md:text-[1.75rem] mb-1.5 font-normal}
+.hero-section .hero-content .banner-text.banner-dark-bg h3{  @apply text-xl md:text-2xl font-normal}
+.timer .box{  @apply text-base md:text-xl}
+.for-allow{  @apply inline-block w-full mb-2.5 text-red}
+
+
+
+
+/* Mobile btns */
+.mobile-btns{  @apply flex md:hidden justify-between w-full mb-3.5 float-left}
+.mobile-btns .button-bx{  @apply m-0 w-full justify-between flex-row}
+.mobile-btns .button-bx .btn{  @apply w-[48%] border-0 !border-b !border-box-border  text-lg    !capitalize}
+.mobile-btns .button-bx .btn + .btn{  @apply mt-0}
+.mobile-btns .btn.mapBtn{@apply text-lg bg-bg-gray1 text-white hover:bg-bg-gray1 hover:!text-white}
+body:not(.mapView) .mobile-btns .btn.listBtn{  @apply text-Dark-red border-t-0 border-l-0 border-r-0 !border-b-2 !border-red   !capitalize }
+.browse-dir{  @apply ml-4 md:ml-0}
+.browse-dir a{@apply hover:no-underline }
+body.mapView .mobile-btns .btn.mapBtn{  @apply  text-lg    !capitalize }
+.mobile-btns a.btn.listBtn {@apply bg-bg-blue !text-white border-none hover:bg-bg-blue}
+
+
+
+/* left listing */
+.search-bx{@apply  mb-0  z-20  text-gray-dark float-left w-full md:w-[26rem] lg:w-[28.75rem] bg-[#f0fafd] p-5 shadow-[0_0px_6px_#00000029] mb-5}
+.locator-find-block{@apply shadow-[0_0px_6px_#00000029]}
+.search-bx button{ @apply float-left mr-0 relative text-white text-xs sm:text-sm }
+.search-bx button.useMyLocation {@apply text-black flex items-center font-main-font text-[0.938rem] uppercase border border-bg-blue rounded p-2}
+.search-bx button.useMyLocation .icon{@apply mr-1.5}
+.search-field{@apply flex relative  }
+.search-bx .search-btn{@apply absolute top-0 rounded-none right-0  text-white p-2 w-16 h-12 text-center bg-bg-blue}  
+.search-bx .search-btn svg{ @apply mx-auto}
+.search-field input{@apply  w-full bg-white h-12 text-[#2D3846] placeholder:text-[#2D3846]  py-2 pr-20 sm:py-4 sm:pr-40 pl-4 leading-7  text-sm font-main-font rounded-none 
+  outline outline-transparent outline-offset-2}
+.location p{ @apply mr-2 static rounded-lg -left-4 top-[0px] sm:top-[2px] xl:top-1}
+.search-bx .whitespace-nowrap{  @apply text-white !font-normal py-0 }
+.location{ @apply  border-b border-[#d8d8d8]  mt-0 }
+.location .result-inner .address-with-availablity {@apply mb-0}
+.c_facility{@apply flex items-center text-sm text-black mt-3 ml-1 flex-wrap leading-6 }
+.c_facility p {@apply mr-2}
+.c_facility div{@apply flex items-center flex-wrap leading-7}
+.location .result-inner .svg-map-icn svg{@apply fill-gray }
+.location.fixed-hover .result-inner .svg-map-icn svg{@apply fill-red }
+.c_facility img {@apply !m-[initial] !mr-1}
+   
+.c_facility_hover{@apply transition-all duration-300 cursor-pointer hover:scale-105}
+
+
+.location .button-bx{  @apply justify-start mx-auto pl-0 flex-row  gap-2 flex-wrap sm:flex-nowrap}
+.result-list .location{ @apply first:mt-0}
+.location .button-bx .btn{    -webkit-appearance: none;  @apply bg-Dark-red font-second-font text-lg  border-none text-white  }
+.location .button-bx .btn.notHighligh{@apply w-full bg-transparent justify-start mt-0  border-none text-white text-sm uppercase}
+.location .button-bx .btn + .btn{  @apply mt-2 ml-2 md:mt-0 hover:no-underline   w-auto }
+.location .button-bx .btn:hover svg{@apply !fill-red }
+.location .button-bx .btn-dir .btn{@apply bg-bg-gray1 cursor-pointer flex border border-bg-gray1 rounded-md max-w-[11.5rem] px-2 xl:px-4  h-10 hover:!bg-bg-hover font-bold}
+.button-bx .btn.btn-store {@apply bg-bg-blue  flex border border-bg-gray1 rounded-md max-w-[12rem] px-2 xl:px-4 text-sm uppercase w-full h-10  font-bold} 
+.location .button-bx img {@apply mr-[0.2rem]}
+
+.map-count{ @apply absolute text-white left-1/2 -translate-x-1/2 top-2 md:top-1 2xl:top-1    text-xs }
+#result-1 .result-inner{ @apply pt-1 sm:pt-2 md:pt-4}
+#result-1 .result-inner .availablity-content{@apply mt-2}
+.location-phn{ @apply underline hover:!no-underline text-sm text-black }
+.fliter-sec{ @apply mt-1 flex items-start justify-start sm:justify-between  flex-col}
+.location .result-inner .green-dot, .location .result-inner .red-dot{ @apply  flex justify-center items-center gap-2 }
+/* .location .result-inner .green-dot svg, .location .result-inner .red-dot svg{ @apply  ml-1 mt-1 } */
+.location-with-filter{ @apply mb-1 flex items-center justify-between text-sm leading-5}
+.location-with-filter h1{@apply font-bold text-[#2d3846] my-0 font-second-font text-xl capitalize}
+.list-count{ @apply border-b border-gray-light mb-4 p-2 flex  flex-row items-center}
+.result-inner{@apply p-4 pt-2 sm:p-4 }
+.button-bx{@apply flex flex-col sm:flex-row mt-2.5 justify-around  ml-6}
+.button-bx .btn{@apply py-1.5 md:py-2  text-center cursor-pointer leading-4 sm:leading-[1.375rem] w-full sm:w-[48%]  
+   px-2 transition-all duration-300 text-gray-dark
+    hover:text-white   border-black border hover:border-transparent  bg-white text-sm md:text-base font-medium flex items-center justify-center hover:bg-bg-hover }
+.button-bx .btn + .btn{  @apply mt-2 sm:mt-0}     
+.button-bx .btn:hover svg{@apply fill-white  }
+.scrollbar-container{@apply md:pr-3 md:!h-[calc(100vh_-_12rem)]}
+.scrollbar-container.ps--active-y{ @apply pr-6}
+body .ps:hover .ps__rail-y{@apply opacity-100}
+body .ps__rail-y{ @apply opacity-100 !bg-[#F6F6F3] w-4}
+body .ps__thumb-y{ @apply bg-bg-gray1 opacity-100 right-1 w-2}
+body .ps__rail-y:hover .ps__thumb-y{ @apply w-2 bg-gray-dark}
+table.day-hrs{  @apply border-none w-full mb-0}
+table.day-hrs td{ @apply text-right p-1 }
+.storelocation-openCloseTime table.day-hrs{  @apply bg-white xl:max-w-md 2xl:max-w-lg border   mx-auto xl:right-3.5 relative}
+.storelocation-openCloseTime table.day-hrs .dayName{  @apply w-auto}
+.storelocation-openCloseTime table.day-hrs .time-group{  @apply w-full justify-between flex }
+.storelocation-openCloseTime .day-hrs td{  @apply px-2.5}
+.storelocation-openCloseTime .day-hrs td.dayName{  @apply pl-8}
+.storelocation-openCloseTime table.day-hrs .currentDay .dayName .checked{  @apply left-2.5}
+
+.result-inner .hours-info {@apply relative inline-block pr-5}
+.result-inner .hours-info:after {@apply content-[''] top-2 absolute right-0 border-[0.375rem] border-transparent  border-t-black}
+.active.cursor-pointer .hours-info:after {@apply content-[''] rotate-180 top-[0.188rem]}
+.location-information a#holidaybtn {@apply absolute right-0 top-[0.188rem] text-[#333333] text-sm}
+.location-information .hours-sec .hours-div{@apply static}
+.hours-sec{@apply relative}
+
+.location-information .address-main-sec .button-bx img{@apply hidden}
+
+/* .storelocation-openCloseTime table.day-hrs .time-b{
+  @apply bg-location-bg
+} */
+
+table.day-hrs tr:last-child td{  @apply border-b-0}
+table.day-hrs .dayName{ @apply text-lg md:text-lg capitalize pl-0 py-0 text-left}
+table.day-hrs .currentDay .dayName{  @apply relative  py-1}
+table.day-hrs .currentDay{  @apply  bg-bg-gray1 text-white}
+table.day-hrs .currentDay span.span-dayname{@apply text-white inline-block relative}
+table.day-hrs  span.span-dayname{@apply pl-7}
+table.day-hrs .currentDay span.span-dayname:before {@apply absolute top-[0.125rem] left-[0.25rem] h-[1.125rem] w-[1.125rem] content-[''] bg-bg-primary
+}
+table.day-hrs .currentDay span.span-dayname:after{
+  @apply content-[''] w-1.5 h-2.5 border-b-2 border-r-2 border-white absolute top-[0.313rem] left-[0.625rem] transform rotate-45
+}
+
+
+
+/* table.day-hrs .currentDay .dayName .checked{  @apply absolute top-1/2 -mt-2 left-0 bg-red rounded-sm w-4 h-4 z-0}
+table.day-hrs .currentDay .dayName .checked:after{  @apply content-[''] border-b-2 border-l-2 border-white transform -rotate-45 z-0 w-2.5 h-1.5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -mt-1} */
+table.day-hrs .time-group{ @apply  items-center lowercase flex items-center justify-between leading-7 } 
+/* table.day-hrs .time-group .dash{ @apply w-2.5 h-0.5 bg-nav-link mx-1.5} */
+table.day-hrs .dayName span{ @apply block text-black text-sm font-normal}
+table.day-hrs .time-b{  @apply text-sm  w-[5rem] leading-[1.875rem] rounded-sm inline-block align-bottom text-center my-0.5}
+.hours-sec .hours-div{  @apply relative}
+.hours-sec .hours-div .holy-hrs{  @apply absolute -bottom-4 left-0       text-gray flex flex-row items-center}
+.hours-sec .hours-div .holy-hrs a{ @apply underline hover:no-underline  text-lg }
+.hours-sec .hours-div .holy-hrs span{ @apply mr-2 }
+.hours h4.box-title{@apply !text-black}
+.ReactModal__Body--open{
+  @apply overflow-hidden
+}
+.ReactModal__Content{ 
+  @apply max-w-[94%] md:max-w-3xl w-full max-h-[80%] !mr-0 !p-0 !pb-8 !border-none  !rounded-none
+}
+.ReactModal__Overlay{
+  @apply !bg-black bg-opacity-80 z-[999]
+}
+.ReactModal__Content .font-bold.text-lg.mb-4 {@apply pt-3 px-5 pb-0}
+
+
+.ReactModal__Content .closeButton {@apply absolute right-4 top-2 cursor-pointer}
+.pop-up-holyhrs{@apply flex flex-row border border-dark-gray mx-4  border-b-0 last:border-b}
+.pop-up-holyhrs > div{@apply flex-[1_1_0] p-2.5 md:p-1.5 lg:p-2.5}
+.pop-up-holyhrs.heading{@apply bg-dark-gray text-white}
+.holytime-sec{@apply w-48 flex justify-evenly}
+.spac-bx{@apply w-8 text-center}
+.op-time{@apply w-8  lowercase}
+.cl-time{@apply w-8 lowercase}
+.days-sec{@apply w-8 lowercase}
+.closeButton{
+  @apply bg-red flex items-center justify-center rounded-full hover:opacity-80
+}
+.closeButton svg{
+  @apply w-3.5
+}
+.closeButton svg path{
+  @apply fill-white
+}
+
+
+
+
+.location-name-miles{
+  @apply relative pr-0 md:pr-[6.25rem] leading-5 mb-2.5 flex !flex-row justify-between items-center md:flex-col 
+}
+.location-name-miles h2{  @apply text-3xl md:text-lg leading-[1.375rem] text-red md:leading-tight}
+.location-name-miles h2 a{ @apply text-lg text-bg-blue font-second-font font-bold}
+.address_1 div {
+  inline-size: 195px;
+  overflow-wrap: break-word;
+  hyphens: manual;
+}
+.location-name-miles .distance{
+  @apply sm:absolute sm:top-0 right-0 text-sm text-black  mt-1 sm:mt-0
+}
+.icon-row a{
+  @apply hover:underline
+}
+
+.icon-row{
+  @apply relative mb-3 flex gap-2
+}
+.icon-row.location-name-miles{
+  @apply mb-2
+}
+.icon-row .icon{
+  @apply static top-0 left-0
+}
+.icon-row .icon img, .icon-row .icon svg{
+  @apply mr-0
+}
+.icon-row h6{
+  @apply font-normal text-red m-0 leading-5 text-base md:text-lg md:leading-5 mb-1.5
+}
+.availablity-content{
+  /*  border-l border-nav-link*/ @apply pl-0 py-1.5 
+}
+
+
+.gm-style-iw{ @apply  !px-0 max-w-full md:!max-w-[24.312rem] lg:!max-w-full}
+.gm-style .gm-style-iw-c{border: 1px solid #0000002E;
+  border-bottom: 7px solid #2AB6DF;@apply !rounded-md !shadow-[0_7px_0px_[#2AB6DF]] }
+.gm-style-iw-d .button-bx{@apply !justify-start flex-row }
+.gm-style-iw-d .button-bx .getdirection{@apply !bg-transparent !text-bg-blue underline text-sm font-bold}
+.gm-style-iw-d .button-bx .getdirection1{@apply !bg-transparent  !text-gray underline }
+.gm-style .gm-style-iw-tc::after{@apply bg-bg-blue}
+.info-window-content{@apply flex   justify-between}
+.info-window-content .address{ @apply w-2/3 flex gap-2 text-black text-sm mb-2}
+.info-map{ @apply w-2/3 flex gap-2 text-black text-sm mb-2}
+.gm-ui-hover-effect{@apply !top-0.5  !right-1 !bg-black opacity-100 rounded-full !w-5 !h-5} 
+.gm-ui-hover-effect span{@apply !w-4 !h-4 !m-0.5 !bg-white}
+.open-now-string svg{  @apply fill-gray-dark}
+.distance {@apply text-sm text-black}
+.distance img {@apply !m-auto}
+
+.gm-style .gm-style-iw-c .getdirection1.btn{@apply justify-start ml-6 uppercase font-second-font !text-bg-blue no-underline hover:scale-105}
+
+.closeing-div .opendot{ @apply  text-sm  gap-2   text-black relative before:hidden after:hidden  after:bg-[#338833] after:w-2 after:h-2  after:absolute after:top-1/2  after:ml-2 after:-translate-y-1/2  after:rounded-full}
+.closeing-div .closeddot{ @apply  text-lg font-main-font text-gray relative  before:hidden after:hidden after:bg-[#EB001B] after:w-2 after:h-2  after:absolute after:top-1/2  after:ml-2 after:-translate-y-1/2  after:rounded-full}
+.closeing-div{ @apply  flex items-center gap-2 }
+.banner-dark-bg .closeing-div .opendot{ @apply  font-main-font text-xl text-black relative before:hidden after:hidden }
+.banner-dark-bg .closeing-div .closeddot{ @apply  font-main-font text-xl text-gray relative before:hidden after:hidden   }
+.detail-page .notHighlight{ @apply  text-2xl}
+.green-dot, .red-dot{ @apply  flex justify-center items-center  }
+.green-dot svg, .red-dot svg{ @apply  mr-1  }
+
+
+/* pagination */
+nav[aria-label="Pagination"] button{ @apply rounded-none text-Dark-red border-Dark-red}
+nav[aria-label="Pagination"] button:hover, nav[aria-label="Pagination"] button.bg-primary-light{ @apply bg-Dark-red text-white}
+nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opacity-60 bg-opacity-60}
+.pagination-conatiner{ @apply mt-4}
+.nearby-btn .btn{ @apply !w-full}
+.nearby-card .button-bx{@apply ml-0 lg:ml-0 flex-row justify-start gap-3 flex-wrap mt-auto}
+.nearby-card .button-bx .btn{@apply min-w-[12rem]  w-40 py-3 uppercase  !border-none  leading-5  md:w-auto font-second-font font-bold rounded-md !bg-bg-blue  text-sm text-white}
+.nearby-card .button-bx .btn.notHighligh{@apply min-w-[10.25rem] w-40 py-3 uppercase  !border-none  leading-5  md:w-auto font-second-font font-bold rounded-md !bg-bg-gray1 text-white text-sm hover:!bg-bg-hover}
+.nearby-card .button-bx .btn + .btn{@apply mt-0 w-auto hover:no-underline hover:!bg-bg-hover}
+.nearby-card .button-bx .btn:hover svg{@apply !fill-red }
+.map-section .button-bx .btn{@apply w-[11.25rem] md:w-[9.25rem] lg:w-[11.25rem]  bg-Dark-red hover:bg-hover-btn  border-none text-white  }
+.map-section .button-bx .btn.notHighligh{@apply w-full bg-white justify-start  border-none text-black underline  }
+.map-section .button-bx .btn + .btn{@apply mt-2 md:mt-0 w-auto ml-2 hover:no-underline}
+.map-section .button-bx .btn:hover svg{@apply !fill-red }
+
+.nearby-card .green-dot svg, .nearby-card .red-dot svg{@apply order-2 }
+.nearby-cta .Link.button-red{@apply font-second-font font-bold rounded-md !bg-bg-gray1 text-white text-sm border-none hover:!bg-bg-hover tracking-[0.125rem]}
+.nearby-sec .splide__slide img{@apply w-auto}
+.nearby-card1{@apply flex flex-col h-full}
+/* locator page start  */
+
+/* breadcrumb */
+.breadcrumb{@apply text-nav-link py-3}
+.breadcrumb ul{
+  @apply flex flex-wrap items-center
+}
+.breadcrumb ul li{
+  @apply md:mr-2 font-main-font text-black flex items-center text-[14px] 
+}
+.breadcrumb ul li .home{
+  @apply underline
+}
+
+.breadcrumb ul li{
+  @apply after:content-[''] last:after:content-none after:w-1.5 after:h-1.5  after:border-r after:border-b after:border-black after:transform after:-rotate-45 after:mx-2 after:md:mr-0 after:mt-0.5  
+}
+.breadcrumb ul li a{ 
+  @apply hover:text-red font-main-font
+}
+
+/* hero-banner */
+.hero-section{  @apply relative z-0 overflow-hidden bg-black}
+.hero-section .hero-image{  @apply w-full h-full z-10 object-cover object-center absolute top-0 left-0 opacity-60
+}
+.hero-section .hero-content{ @apply relative z-10 text-white text-base md:text-2xl py-6 md:py-14 leading-7 md:leading-10 min-h-[9.75rem] md:min-h-[12.75rem] flex w-full items-center
+}
+.hero-section .hero-content h1{  @apply text-[2.125rem] md:text-[3.438rem] mb-3 text-white font-bold}
+.hero-section .hero-content p{@apply max-w-2xl}
+.banner-text h1{ @apply text-[2.4375rem] mb-3 font-second-font text-center}
+.hero-section .hero-content button {@apply rounded-md bg-bg-blue font-second-font font-bold uppercase mt-0 md:mt-3 min-w-[10.938rem] h-[2.625rem] text-sm hover:bg-bg-hover tracking-[0.125rem]}
+
+
+
+
+/* address sec */
+.location-information{  @apply flex flex-wrap w-full justify-between xl:justify-start max-w-[100rem] mx-auto px-5 xl:px-4 2xl:px-0 pb-2 lg:pb-7 pt-1 lg:py-11}
+.address-main-sec{@apply bg-address-bg px-4 md:px-6 py-4 md:py-6 w-full sm:w-[50%] lg:w-[48%]  lg:w-[22.813rem] relative z-[0] md:mr-4 order-none mt-4 md:mt-4 lg:mt-0 border-2 border-bg-blue rounded-2xl ; } 
+.address-main-sec .address-text{ @apply text-sm text-black}
+.address-main-sec .map-sec{ @apply block h-72 -ml-4 w-[100vw] sm:hidden}
+.location-icon{@apply bg-bg-blue h-[1.625rem] w-[1.625rem] p-[0.313rem] md:p-[4px] xl:p-[0.313rem] rounded-full}
+.telephone{@apply bg-bg-blue h-[1.625rem] w-[1.625rem] p-[0.30rem] lg:p-[0.438rem]  rounded-full}
+.email{@apply bg-bg-blue h-[1.625rem] w-[1.625rem] p-[0.30rem] lg:p-[0.438rem]  rounded-full}
+.location-information .address-main-sec svg {@apply w-4 lg:w-auto h-4 lg:h-auto}
+.locator-main .result svg {@apply w-4 lg:w-auto h-4 lg:h-auto}
+.location-information .location-phn {@apply no-underline}
+
+
+
+.box-title{@apply    text-[1.3125rem] md:text-[1.375rem] mb-4}
+.title-with-link{@apply flex justify-between items-center mb-4}
+.title-with-link .box-title{ @apply mb-0}
+.title-with-link-1{@apply flex justify-between items-center mb-4}
+.title-with-link-1 .box-title{ @apply mb-0}
+.text-link{ @apply relative cursor-pointer capitalize text-red hover:text-black after:content-[""] after:bg-black after:h-px after:absolute after:left-0 after:bottom-0 after:w-0 after:transition-all after:duration-500 after:hover:w-full before:content-[""] before:bg-[#333333] before:h-px before:absolute before:left-0 before:bottom-0 before:w-full  }
+.address-bx{@apply text-base }
+.address-bx, .phone-bx{ @apply text-base  }
+.address-bx h4{@apply text-red font-normal text-base uppercase }
+.phone-bx h4{@apply text-red font-normal text-base uppercase }
+.hours{  @apply bg-[#e5f6fb] rounded-2xl mt-5  lg:mt-0 w-full sm:w-[48%] lg:w-[23.75rem] p-4  lg:mr-4}
+.address-with-availablity{  @apply flex  items-start flex-col}
+.address-with-availablity .address{  @apply pr-5 text-black text-sm flex gap-2 mb-2}
+.closeddot{@apply flex  items-center gap-2}
+.hours-info{@apply text-sm text-black}
+
+.button-bx button#view-more-button {@apply mt-0 text-sm border-none !mb-0 text-black w-auto hover:bg-transparent}
+.address-with-availablity > div{  @apply flex-1}
+.address-with-availablity > .availablity-content{  @apply   w-full flex   flex-wrap}
+.opennow-sec{@apply w-3/5 even:w-2/5 flex flex-row items-center text-lg sm:text-lg mb-2.5}
+.opennow-sec .icons{@apply min-w-[0.75rem] sm:min-w-[1.25rem] mr-1 sm:mr-1}
+.opennow-sec .icons img{@apply w-5 sm:w-5}
+.direction-button{@apply mt-6 }
+.direction-button a{@apply  !bg-Dark-red !text-white  !border-button-light hover:!border-transparent !border-2 }
+.direction-button .btn:hover svg{@apply !fill-red }
+.opennow-sec.deactive-feci{@apply opacity-70 text-red }
+.address-main-sec .button-bx{  @apply mt-5 justify-start ml-0 md:ml-0}
+.address-main-sec .button-bx .btn{  @apply min-w-[10.25rem] w-40 py-3 uppercase  !border-none  leading-5  md:w-auto font-second-font font-bold rounded-md !bg-bg-gray1  text-sm hover:!bg-bg-hover tracking-[0.125rem]}
+.availability-col{  @apply mt-2  mb-0 pl-0    !flex-row flex-wrap}
+.map-sec{  @apply  hidden sm:block w-full mt-5 lg:mt-0  h-[25rem] lg:h-auto  lg:w-[calc(100%_-_48.563rem)]}
+.map-sec.without-hours{  @apply md:w-[48%] md:mt-0 lg:w-[calc(100%_-_26rem)]}
+.map-sec > div{@apply rounded-2xl}
+
+
+
+
+.about-sec{@apply  relative px-0 lg:px-5 mt-0  pt-0 lg:py-12 lg:px-14 mt-4  }
+.about-sec .about-content{@apply mt-5 lg:mt-0 w-full overflow-visible lg:w-[57.6%] xl:w-[50.6%] ml-auto lg:pr-10 lg:pb-12 lg:pt-6 xl:pt-12 flex items-center relative}
+.about-sec:after{@apply content-[''] static lg:absolute bg-[#2AB6DF1F] w-auto h-[35.5rem] left-[24vw] -z-[1] top-0 right-0}
+.about-sec .about-content h2{@apply mb-3 md:mb-6 text-left lg:block font-bold text-bg-gray1 text-2xl md:text-[3rem] font-second-font}
+.about-inner-sec h2{@apply block text-center w-full pb-0 lg:pb-6 lg:pb-0  font-medium text-red     text-[1.625rem]}
+.about-inner-sec img{ border-radius: 0 20px 0 20px;@apply w-full lg:w-[50rem] h-auto md:h-[28.938rem] object-cover}
+.about-sec .content-center{ @apply flex lg:inline-block  }
+.about-sec .about-content .about-content-inner{@apply text-black leading-7 text-sm md:text-base mt-0 lg:mt-3 md:mt-6 }
+.about-sec .about-content .btn{@apply mt-2 md:mt-6  }
+.about-inner-sec{ @apply flex flex-wrap }
+.right-description .content-inner{@apply text-black leading-7 text-lg mt-3 md:mt-6 }
+.button-red{@apply btn  text-center    border border-red hover:bg-hover-btn bg-red-eb px-3 lg:px-5  xl:px-7 uppercase text-xs xl:text-base !leading-9 inline-block  text-white   py-0.5 }
+.about-sec .about-content .button-red{@apply w-[9.75rem] text-sm font-second-font font-bold bg-bg-gray1 border-none rounded-md hover:bg-bg-hover tracking-[0.125rem]}
+.about-inner-sec .splide .splide__arrows{ @apply absolute bottom-0 left-0 p-0.5 flex}
+.about-inner-sec .splide .splide__arrows .splide__arrow{  @apply relative top-auto left-auto transform translate-x-0 translate-y-0 !opacity-100 right-0 w-[4.375rem] h-[3.75rem] rounded-none bg-white disabled:hidden}
+.about-inner-sec .splide .splide__arrows .splide__arrow.splide__arrow--next{  @apply ml-0.5}
+.about-inner-sec .splide__track{  @apply lg:h-full}
+.about-inner-sec .splide__slide img{ @apply lg:h-full lg:object-cover transition-all duration-300}
+.about-inner-sec .splide__slide img:hover{@apply transform scale-105}
+.splide__slide img{  @apply w-full}
+.splide{  @apply w-full}
+.offerBanner{  @apply w-full pb-7 md:pb-10}
+.offerBanner img{  @apply w-full shadow-2xl}
+
+.gallery-sec{@apply  m-0 relative  }
+.gallery-bg{@apply absolute inset-0 -z-10 }
+.gallery-bg img{@apply  w-full h-full }
+.photos-row{@apply grid gap-3 md:grid-cols-2  lg:grid-cols-3}
+.image-frame{@apply !m-2 border p-3 border-dashed border-gray-dark w-full  }
+.photos-row img{@apply w-full  rounded-none object-cover h-80  }
+
+/* Available Stock sec */
+.available-stock h2 {@apply font-second-font text-2xl md:text-5xl font-bold text-bg-gray1 mb-5}
+.available-stock .about-content-inner {@apply text-center leading-7}
+.available-stock{@apply  relative mt-3 py-8 md:py-12 px-2 md:px-14  }
+/* .available-stock .about-inner-sec a{@apply relative ml-2}
+.available-stock .about-inner-sec a:after{@apply content-[''] absolute bg-black w-[0.063rem] h-[0.875rem] ml-1 top-1} */
+.available-stock .about-inner-sec a.Link {@apply border-r border-black px-1 hover:text-bg-blue}
+
+
+
+/* Meet team */
+.meet-team {@apply bg-[#fbfbfb]}
+.meet-team img{@apply border-[0.625rem] border-[#ececec] rounded-3xl}
+.meet-team {@apply bg-[#fbfbfb]} h2.meet-title {@apply text-center !text-lg text-[#2d3846]  !mb-0}
+.meet-team .about-content-inner {@apply text-[#2d3846] text-center}
+.meet-team h2 {@apply font-second-font text-2xl  md:text-5xl font-bold text-bg-gray1 mb-5}
+.meet-team{@apply  relative mt-3 py-8 md:py-12 px-2 md:px-14  }
+.meet-team .flex.flex-raw .team-page{@apply w-full sm:w-1/2 lg:w-1/4}
+
+
+
+/* Take A Look Inside Our Branch */
+
+.gallery img {@apply w-full md:h-[9.75rem] lg:h-[13.75rem] object-cover}
+.gallery{@apply  relative  mt-3 py-8 md:py-12 px-2 md:px-14  }
+.gallery h2 {@apply font-second-font text-2xl leading-[2.5rem] md:text-5xl font-bold text-bg-gray1 mb-5}
+.gallery .Branches {@apply mb-4 md:mb-0}
+/* featuredBrand */
+
+.featuredBrand {@apply bg-[#fbfbfb]  mt-3 py-8 md:py-12 px-10 md:px-14}
+.featuredBrand h1 {@apply font-second-font text-2xl md:text-5xl font-bold text-bg-gray1 mb-6 md:mb-[3.5rem] pb-0}
+
+.img-splide {@apply h-[8.313rem] max-w-[auto] md:max-w-[12.5rem] bg-white}
+.img-splide img{@apply h-[8.313rem] object-contain}
+
+/* Store location sec */
+.locator-main .result table { border-style: inherit;@apply bg-[#2AB6DF1F] !border border-[#0000002E] text-black ml-8 xl:ml-12 max-w-[initial] md:max-w-[19rem] lg:max-w-[22rem]}
+.locator-main .result table td {@apply !pl-0 text-sm text-black pt-2 pb-2} 
+.locator-main .result table span {@apply text-sm text-black}
+.locator-main .result table span.time-b{@apply w-[3.813rem]}
+.locator-main .result table tr{@apply border-b border-[#00000033]}
+/* .locator-main .result table span.dash{@apply w-[0.313rem] h-[0.125rem]} */
+.locator-main .result table tr.currentDay span{@apply text-white}
+.locator-main .result table tr.currentDay {@apply bg-bg-gray1 text-white border-b-0}
+.locator-main .result table tr.currentDay td {@apply text-white font-normal}
+/* .locator-main .result table tr.currentDay span.dash {@apply bg-white} */
+.locator-main .result table span.span-dayname {@apply pl-7}
+
+
+.locator-main .result table tr.currentDay .span-dayname {@apply relative inline-block }
+
+.locator-main .result table tr.currentDay .span-dayname:before {@apply absolute top-[0.125rem] left-[0.25rem] h-[1.125rem] w-[1.125rem] content-[''] bg-bg-primary
+}
+.locator-main .result table tr.currentDay .span-dayname:after{
+  @apply content-[''] w-1.5 h-2.5 border-b-2 border-r-2 border-white absolute top-[0.313rem] left-[0.625rem] transform rotate-45
+}
+
+/* 05-04-23 */
+.location-information h4.box-title{@apply text-lg text-bg-blue font-second-font font-bold}
+
+
+/* services sec */
+.services-sec{@apply bg-white w-full pt-8 pb-16 md:py-9 }
+.sec-title{@apply mb-4 md:mb-7}
+.sec-title h2, .sec-title h1{@apply text-center text-2xl    md:text-[1.75rem] text-red  }
+.sec-title h1{@apply mb-5}
+.services-inner{@apply flex flex-wrap  }
+.services-inner .service-icon{@apply  m-0 }
+.services-inner .item{@apply px-2 w-full sm:w-1/2 lg:w-1/3 my-2}
+.services-inner .service-item{@apply border border-box-border flex flex-col p-0 w-full h-full }
+.service-item .service-img{@apply overflow-hidden}
+.service-img img{@apply h-52 object-cover transition-all duration-300}
+.service-item:hover img{@apply transform scale-105}
+.service-item h3{ @apply text-lg md:text-lg    text-left mt-4 mb-2  }
+.service-desc-main{ @apply  px-3  pb-5 }
+.service-desc{@apply text-base text-left min-h-[4.25rem]   }
+.services-inner  .service-item .button-bx{@apply justify-start  max-w-[10.0625rem] sm:max-w-none  }
+.services-inner  .service-item .button-bx .btn{ @apply uppercase     max-w-[10.0625rem] text-base border-gray }
+
+.services-inner #splide-nearby{
+  @apply max-w-[20rem] sm:max-w-[30rem] md:max-w-[40rem] xl:max-w-full mx-auto
+}
+.mobile-serv-item .service-img{@apply rounded-full w-32 h-32  }
+.services-inner .mobile-serv-item .service-item{@apply items-center }
+.services-inner .button-bx .btn{ @apply text-xs}
+.services-inner .mobile-serv-item{@apply w-full h-full}
+.services-inner .splide__arrow--prev{@apply -left-8 }
+.services-inner .splide__arrow--next{ @apply -right-8 }
+
+
+/* faq */
+.faq-main-sec{@apply m-0 relative pb-7 pt-0 md:pb-0 }
+.faq-sec{@apply m-0 mt-3 py-8 md:py-12 px-2 md:px-14}
+.faq-card { @apply w-full max-w-[63rem]  bg-white/90 mx-auto }
+.faq-card h2{@apply font-second-font text-2xl leading-[2.5rem] md:text-5xl font-bold text-bg-gray1 mb-5 md:mb-11 text-center}
+.faq-tab{@apply w-full text-left mt-0  }
+.faq-tab .faq-tab-label{ @apply w-full    text-xl !border-none  text-black pl-4 pr-4 pt-2 pb-3 bg-[#dcf3fa] mt-3}
+.faq-tab .faq__question-button{@apply leading-7 relative w-full text-left after:absolute after:top-3 after:right-4 after:w-5 after:h-5 md:after:w-7 md:after:h-7 after:rounded-full   after:bg-plus_icon after:bg-center after:bg-no-repeat after:bg-[length:.625rem_.625rem] md:after:bg-[length:1rem_1rem] after:bg-white}
+.faq-tab .faq__question-button[aria-expanded="true"]{ @apply after:bg-minus_icon after:bg-white}
+.faq-tab  .faq-tab-label.active{  @apply border-b-transparent before:opacity-0 bg-bg-blue block}
+.faq-tab .faq-tab-label.active p{@apply text-white border-b border-white w-full inline-block pb-3}
+.faq-tab-content.current{@apply bg-bg-blue text-white font-normal border-b-4 border-bg-gray1}
+.faq-tab  .faq-tab-label{ @apply flex justify-between items-center relative font-normal cursor-pointer border-b border-faq-border }
+.faq-tab-content{@apply px-4 text-sm leading-7 md:text-lg text-black pt-0 pb-3 md:py-3 bg-opacity-25  }
+.faq-tab-label.active{ @apply justify-start }
+.view-more{  @apply text-center mt-5}
+
+.faq_CTA{@apply mt-6 text-center}
+.faq_CTA a{@apply font-second-font font-bold rounded-md !bg-bg-gray1 text-white text-sm border-none px-7 py-3 hover:!bg-bg-hover tracking-[0.125rem]}
+
+/* near by */
+.nearby-sec{@apply bg-[#fbfbfb] w-full pt-6 pb-8 md:py-[3.75rem] }
+.nearby-sec-inner{@apply sm:mx-auto sm:max-w-[33.5rem] lg:mx-auto lg:max-w-none flex flex-col lg:flex-row gap-4 justify-center pb-0 xl:pb-0 }
+.nearby-sec .splide__slide{@apply xl:px-0}
+.nearby-card{@apply md:!pt-0 w-full bg-[#e6f4f8] rounded-xl overflow-hidden  z-10 relative shadow-sm last:mb-0 lg:last:mb-6  mb-0 md:mb-6 lg:mt-6  lg:relative p-3 md:p-5 border border-box-border }
+.nearby-card .red-dot{ @apply !justify-start}
+.nearby-card .icon-row{ @apply pl-0}
+.nearby-card .OpenDot{ @apply      text-lg}
+.nearby-card h2 a{ @apply     !text-lg text-bg-blue underline }
+.nearby-card .distance{ @apply absolute right-2 top-0 md:-top-0.5}
+.near-address{ @apply flex mt-2 items-start min-h-[90px]}
+.nearby-card .address { @apply text-sm gap-2 flex}
+.nearby-card .availability-col{@apply my-4 hidden md:flex md:max-w-[100%] lg:max-w-none }
+#splide-nearby{  @apply max-w-[79.75rem] mx-auto}
+.nearby-sec .splide__pagination{  @apply -bottom-2}
+.nearby-sec .splide__pagination__page{  @apply w-2.5 h-2.5 bg-red !opacity-40}
+.nearby-sec .splide__pagination__page.is-active{  @apply bg-red scale-100 !opacity-100}
+
+.nearby-sec h2{@apply font-second-font text-2xl md:text-5xl font-bold text-bg-gray1 mb-5 text-center}
+.nearby-sec .icon-row.closeing-div {@apply mt-3}
+.featuredBrand .splide__arrow--prev {@apply -left-[2.75rem] bg-bg-blue}
+.featuredBrand .splide__arrow--next {@apply -right-[2.75rem] bg-bg-blue}
+.featuredBrand .splide__arrow--prev:disabled {    border: 1px solid #bdb8c1;  @apply !bg-transparent !border !border-[#bdb8c1]}
+.featuredBrand .splide__arrow svg {@apply fill-white h-4 w-4}
+.featuredBrand .splide__arrow--next svg {@apply fill-white}
+.featuredBrand .splide__arrow:disabled {@apply opacity-100}
+.Features-brand .img-splide {@apply m-2 md:m-0}
+.featuredBrand .splide__arrow--prev:disabled svg{@apply fill-[#bdb8c1]}
+
+.nearby-sec .content-center{@apply mt-5 lg:mt-0}
+.nearby-sec .nearby-card svg{@apply w-4 lg:w-auto h-4 lg:h-auto}
+
+
+
+/* newsletter sec */
+.newsletter-section{ @apply bg-newslettter_bg_mob lg:bg-newslettter_bg py-6 mt-10 w-full inline-block }
+.newsletter-inner{@apply  max-w-[25.75rem] mx-auto px-4  }
+.newsletter-section p{@apply text-white text-sm md:text-lg text-center md:text-left }
+.search-field-bx{@apply flex mt-6 }
+.search-field-bx input{@apply bg-white text-gray-dark w-full px-3 py-3 text-sm outline-none flex-[1_1_auto] }
+.search-field-bx button{@apply bg-red hover:bg-Dark-red text-white py-3 px-4 text-sm flex-[1_1_auto] whitespace-nowrap }
+.newsletter-logo{@apply    mx-auto w-full mb-6 }
+.newsletter-logo img{@apply mx-auto  }
+
+
+
+
+
+
+
+
+/* footer sec */
+/* footer sec */
+.site-footer{  @apply pt-10 }
+.site-footer .container{@apply flex flex-col mx-auto flex-wrap justify-between lg:mt-10 lg:flex-row px-0 lg:px-5 }
+.store-locator{ @apply block justify-center  lg:border-none px-5 lg:px-0 flex-[1_0_20%]  md:max-w-[20%] w-full}
+.link-sec-footer{ @apply w-full  pl-0 lg:pl-0 md:pr-0 lg:pr-5 xl:pr-7  block md:flex flex-wrap  text-left   text-black	lg:flex-row}
+.copyright-bx{@apply   flex flex-col justify-center mb-2 md:mb-0 mt-0 lg:mt-5 lg:mt-0 lg:items-start px-5 lg:px-0 text-left }
+.copyright-bx .app-icons{ @apply justify-center lg:justify-start}
+.copyright-bx .social-media-bx{ @apply justify-center lg:justify-start}
+.store-locator .store-inner{@apply relative w-auto text-base lg:text-xl mb-4 after:content-[''] font-medium justify-center flex items-center  }
+.store-locator .store-inner a{@apply hover:underline font-semibold text-[#e9e9e9] text-xs}
+.company-logo{ @apply  mt-0 w-[6.875rem]}
+.social-media-bx{@apply flex-row flex w-full my-1 }
+.social-media-bx li a{@apply transform transition-all duration-300 scale-100 hover:scale-105 inline-block}
+.company-logo svg{ @apply mr-0  mt-5 w-[166px] h-[70px] }
+.locator-main .result{ @apply bg-white shadow-[0_7px_0px_[#2AB6DF]] mb-5 rounded-md border border-[#0000002E]}
+
+.locator-main .result.active{@apply border-b-8 border-b-bg-blue bg-[#F1F1F1] shadow-[0_7px_0px_[#2AB6DF]]}
+.locator-main .result.fixed-hover.active{@apply border-b-8 border-b-bg-blue bg-[#F1F1F1]}
+.locator-main .result.fixed-hover{@apply border-b-8 border-b-bg-blue bg-[#F1F1F1]}
+.footer-block{  @apply py-3 lg:py-0 lg:border-none px-5 flex-[1_0_20%] max-w-[auto] md:max-w-[20%] w-full}
+.footer-block-title{  @apply text-lg lg:text-[0.938rem] leading-6 pb-1 lg:pb-2 font-second-font font-bold text-[#e9e9e9]}
+.footer-block ul li a{  @apply text-xs leading-6 py-1 inline-block align-top hover:underline text-[#e9e9e9] }
+.site-footer .MuiPaper-elevation{ @apply !rounded-none shadow-none border-b border-[#b2b3b5] !my-0 before:hidden }
+.site-footer .MuiPaper-elevation .MuiTypography-root{ @apply font-bold !font-main-font }
+.site-footer .MuiPaper-elevation .MuiTypography-root .MuiAccordionSummary-content{ @apply my-2.5}
+.site-footer .MuiButtonBase-root{@apply !min-h-[2.125rem]}
+.site-footer .MuiButtonBase-root .MuiAccordionSummary-expandIconWrapper{@apply transition-none }
+.site-footer .MuiButtonBase-root .MuiAccordionSummary-content{@apply !my-0 py-3}
+.site-footer .Mui-expanded .MuiAccordionSummary-content{@apply pb-0}
+.site-footer .Mui-expanded .MuiAccordionSummary-content .MuiAccordionDetails-root{@apply pt-0}
+.site-footer .MuiPaper-elevation .MuiTypography-root li{ @apply list-none}
+.site-footer .MuiAccordionSummary-expandIconWrapper.Mui-expanded{@apply   content-[''] absolute  right-[1rem] transform -translate-x-1/2 -translate-y-1/2 w-3 lg:w-3 h-[1px] lg:h-0.5 bg-black }
+.site-footer .MuiAccordionSummary-expandIconWrapper.Mui-expanded svg{@apply hidden  }
+.site-footer .MuiPaper-elevation .MuiTypography-root li a{ @apply !font-normal !font-main-font}
+
+/* 27-03-23  */
+footer.site-footer {@apply bg-bg-secondary text-[#e9e9e9] w-full inline-block mt-auto}
+footer.site-footer .store-locator .store-inner {@apply pl-0 block}
+footer.site-footer .store-locator .store-inner {@apply flex pl-0 mt-6 !justify-start items-center}
+footer.site-footer .store-locator .store-inner img {@apply w-5 !h-5}
+.social-media-bx img {@apply w-8 h-8 mr-2 md:mr-10}  
+.jd-group img {@apply w-[12.688rem]}
+
+footer.site-footer .cta-list {@apply mt-8 pl-5 lg:pl-0}
+footer.site-footer .Contactus {@apply mt-6 flex-wrap}
+footer.site-footer .Contactus a {@apply text-[0.688rem] mr-4}
+.footer-get{@apply flex items-center gap-2 mt-4}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate
+{
+  0%
+  {
+    transform:rotate(45deg);
+  }
+  100%
+  {
+    transform:rotate(405deg);
+  }
+}
+.spinner-main {  position: fixed;  top: 0;  bottom: 0;  left: 0;  right: 0;  z-index: 999;  background: rgba(0, 0, 0, 0.8);}
+.spinner-container {  position:absolute;  top:50%;  left:50%;  transform:translate(-50%,-50%);  width:50px;  height:50px;  background:transparent;  border:2px solid #fff;  border-radius:50%;  text-align:center;  line-height:150px;  font-family:sans-serif;  font-size:20px;  color:black;     z-index: 9999;  letter-spacing:4px;  text-transform:uppercase;  text-shadow:0 0 10px #eb0000;  box-shadow:0 0 20px rgba(0,0,0,.5);}
+
+.loading-spinner{  display:block;  position:absolute;  top:calc(50% - 2px);  left:50%;  width:50%;  height:4px;  background:transparent;  transform-origin:left;  animation:animate 2s linear infinite;}
+.loading-spinner:before{  content:'';  position:absolute;  width:8px;  height:8px;  border-radius:50%;  background:#eb0000;  top:-3px;  right:-4px;  box-shadow:0 0 20px #eb0000;}
+.hero .hero-content h1.small-heading{  @apply text-5xl}
+.content-list{  @apply pt-7 md:pt-[3.75rem] pb-4 md:pb-8 bg-button-light bg-opacity-25 }
+.content-list .container{  @apply px-4;}
+.region-list{  @apply flex flex-wrap -mx-2 lg:-mx-4}
+.region-list .storelocation-category{  @apply w-1/2 md:w-1/3 lg:w-1/4 px-2 lg:px-4 mb-4 lg:mb-8}
+.region-list .storelocation-category a{  @apply p-6 text-center shadow-[0_3px_5px_rgba(243,243,243,1)] bg-white rounded-md w-full inline-block align-top leading-6 transition-all duration-300 text-sm md:text-base hover:bg-red hover:text-white h-full flex items-center justify-center
+}
+.content-list.city-page{  @apply pb-10 md:pb-14}
+.city-location .button{  @apply px-6}
+.content-list .c_location{@apply px-2.5 lg:px-4 w-full sm:w-1/2 lg:w-1/3 mb-4 md:mb-8}
+.city-location{@apply w-full  h-full bg-white border border-box-border rounded-none overflow-hidden min-h-[22rem]  z-10 relative shadow-sm my-6  lg:relative p-5
+  before:bg-shapet before:hidden after:hidden before:absolute before:-z-[1] before:-right-0.5 before:-top-0.5 before:w-[258px] before:h-[294px] before:bg-no-repeat after:-z-[1] after:w-[220px] after:h-[172px] after:bg-shapeb  after:absolute after:-left-1 after:-bottom-1 }
+.city-location .red-dot, .city-location .green-dot{ @apply !justify-start}
+.locator-map-block .red-dot, .locator-map-block .green-dot{ @apply !justify-start  }
+
+.city-location .button-bx{
+  @apply flex-wrap
+}
+.city-location .button-bx .btn{
+  @apply w-full md:w-[48%]
+}
+.city-location .button-bx .btn + .btn{
+  @apply mt-2 md:mt-0
+}
+
+.city-page .nearby-sec-inner{@apply flex flex-col md:flex-row gap-4 flex-wrap justify-center pb-0 xl:pb-0 max-w-none }
+
+.city-page .nearby-card{@apply w-full md:w-[49%]  xl:w-[32%] bg-white overflow-hidden  z-10 relative shadow-sm last:mb-0 lg:last:mb-0  mb-0 lg:mt-0  lg:relative p-3 md:p-5 border border-box-border
+}
+
+.city-page .nearby-card .availability-col{ @apply md:w-full md:max-w-full lg:max-w-[60%] xl:max-w-full}
+
+
+.city-page .nearby-card .green-dot, .city-page .nearby-card .red-dot{@apply justify-start }
+.city-page .nearby-card .content-col a{ @apply underline hover:no-underline }
+.city-location .button-bx{@apply ml-0 lg:ml-6 flex-row }
+.city-location .button-bx .btn{@apply w-full md:w-[48%] bg-Dark-red     border-none text-white  }
+.city-location .button-bx .btn.notHighligh{@apply w-full md:w-[48%] bg-white justify-start  border-none text-black underline  }
+.city-location .button-bx .btn + .btn{@apply mt-2 md:mt-0}
+.city-location .button-bx .btn:hover svg{@apply !fill-red }
+
+.CookieConsent{
+  @apply  !bg-black bg-opacity-80  !left-1/2 transform -translate-x-1/2 text-center p-3.5 text-sm
+}
+.CookieConsent > div{
+  @apply !m-0 w-full
+}
+.CookieConsent a{
+  @apply text-white underline hover:no-underline
+}
+.CookieConsent button{
+  @apply !bg-[#888] hover:!bg-[#666] !text-white uppercase !px-10 !py-1 leading-6 !border !border-solid !border-[#888] hover:!border-[#666] !m-0 !mt-2.5 min-w-[8.5rem]
+}
+
+
+
+/* 404 page */
+.department-sec{ @apply border-t border-box-border pt-4 }
+.department-sec h3{ @apply text-xl }
+.department-sec ul{ @apply flex  justify-around py-4 flex-wrap }
+.department-sec ul a{ @apply underline hover:no-underline w-1/2 sm:w-1/2 lg:w-auto text-center sm:text-left lg:text-center   }
+.content-list.\34 04-page h1 {@apply font-second-font font-bold text-4xl}
+.content-list.\34 04-page p {@apply text-base}
+.content-list.\34 04-page a.btn {@apply rounded-md bg-bg-gray1 font-second-font text-white}
+.content-list.\34 04-page a.btn.btn-back{@apply bg-bg-blue border-none}
+div#reactele{@apply flex flex-col min-h-screen}
+/* Toggle navigation */
+
+.menu-icon-box {
+  display: inline-block;
+  height: 32px;
+  position: relative;
+  width: 30px;
+}
+.menu-icon-inner {
+  background-color: #555;
+  border-radius: 4px;
+  height: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-timing-function: ease;
+  width: 30px;
+  transition-duration: .22s;
+  display: block;
+  margin-top: -2px;
+  top: 50%;
+  transition-duration: .22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.menu-icon-inner::before {
+  content: "";
+  display: block;
+  top: -10px;
+  background-color: #555;
+  border-radius: 4px;
+  height: 4px;
+  position: absolute;
+  width: 30px;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+.menu-icon-inner::after {
+  content: "";
+  display: block;
+  bottom: -10px;
+  /* transition: bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55, 0.055, 0.675, 0.19); */
+  background-color: #555;
+  border-radius: 4px;
+  height: 4px;
+  position: absolute;
+  width: 30px;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+body.menu-opened .menu-icon-inner::before {
+  top: 0;
+  transition: top .1s ease-out,opacity .1s .12s ease-out;
+}
+body.menu-opened .menu-icon-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom .1s ease-out,transform .22s .12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.menu-opened .menu-icon-inner {
+  background-color: initial;
+  transform: rotate(225deg);
+  transition-delay: .12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);}
+
+@media only screen and (max-width: 1100px) and (min-width:1024px)  {
+  .opennow-sec{ @apply text-base}
+
+
+}
+@media screen and (max-width: 1024px){
+  .site-header .main-nav ul.primary-nav {
+    backface-visibility: hidden;
+    border-bottom: 4px solid #02a6db;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: translateY(10px);
+    width: 100%;
+    display: block;
+  }
+  body.menu-opened .site-header .main-nav ul.primary-nav{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    background: #e9e9e9;
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,.35);
+    list-style: none;
+    padding: 0;
+    transform-style: preserve-3d;
+    display: block;
+  }
+  
+  }
+
+@media screen and (max-width: 767px){
+  body:not(.mapView) .map-section{
+      @apply hidden
+  }
+  body.mapView .left-listing{
+      @apply hidden
+  }
+
+  .gm-style .gm-style-iw-c{
+    @apply !max-w-[22rem] w-full pt-1
+  }
+  
+}
+
+@media screen and (max-width: 640px){
+  .address-main-sec .map-sec {@apply hidden}
+ .map-sec {@apply block}
+ .hours{@apply order-2}
+}
+@media screen and (max-width: 575px){
+  .locator-main .result table{@apply ml-0 mt-1}
+  .btn-dir{@apply w-full}
+.location .button-bx .btn-dir .btn,.button-bx .btn.btn-store {@apply !max-w-[initial] w-full justify-center}
+.nearby-card .button-bx .btn {@apply !max-w-[initial] !w-full justify-center}
+}
+@media screen and (max-width: 420px){
+.availablity-content{ @apply flex-col}
+.opennow-sec{@apply w-full even:w-full}
+.pop-up-holyhrs{@apply mx-1}
+.pop-up-holyhrs div{ @apply text-xs}
+
+.department-sec ul{@apply flex-col }
+.department-sec ul a{@apply w-full }
+.location-name-miles h2 a{@apply text-base}
+.location-name-miles .distance{@apply text-xs}
+.gm-style .gm-style-iw-c{
+  @apply !max-w-[19rem] 
+}
+.location-name-miles h2{
+  inline-size: 195px;
+  overflow-wrap: break-word;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+.location-name-miles .distance{@apply !mr-2}
+.nearby-sec .location-name-miles h2 {
+  inline-size: auto;
+}
+.ReactModal__Content .font-bold.text-lg.mb-4 {
+  padding-left: 0.25rem;
+}
+}
+
+@media screen and (max-width:359px){
+  .site-header .header-top .logo-sm-mob{ @apply !block}
+  .site-header .header-top .logo-sm-mob svg{ @apply !w-14    }
+  .site-header .header-top .logo-large-mob{ @apply !hidden}
+  table.day-hrs .time-b{@apply w-[2.75rem] }
+
+  .storelocation-openCloseTime table.day-hrs{ @apply text-xs}
+  .storelocation-openCloseTime .day-hrs td.dayName{@apply pl-6}
+  .storelocation-openCloseTime table.day-hrs .currentDay .dayName .checked{@apply left-1}
+}
+
+
+
+/* icomoon */
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('https://d1azc1qln24ryf.cloudfront.net/31037/MGMTimber/icomoon.eot?ekov0t');
+  src:  url('https://d1azc1qln24ryf.cloudfront.net/31037/MGMTimber/icomoon.eot?ekov0t#iefix') format('embedded-opentype'),
+    url('https://d1azc1qln24ryf.cloudfront.net/31037/MGMTimber/icomoon.woff2?ekov0t') format('woff2'),
+    url('https://d1azc1qln24ryf.cloudfront.net/31037/MGMTimber/icomoon.ttf?ekov0t') format('truetype'),
+    url('https://d1azc1qln24ryf.cloudfront.net/31037/MGMTimber/icomoon.woff?ekov0t') format('woff'),
+    url('https://d1azc1qln24ryf.cloudfront.net/31037/MGMTimber/icomoon.svg?ekov0t#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.ki {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ki-trustpilot:before {
+  content: "\e94f";
+  color: #00b67a;
+}
+.ki-wishlist:before {
+  content: "\e953";
+}
+.ki-lock1:before {
+  content: "\e950";
+}
+.ki-trade1:before {
+  content: "\e951";
+}
+.ki-arrow-down:before {
+  content: "\e900";
+}
+.ki-arrow-left:before {
+  content: "\e901";
+}
+.ki-arrow-right:before {
+  content: "\e902";
+}
+.ki-arrow-up:before {
+  content: "\e903";
+}
+.ki-attach-file:before {
+  content: "\e904";
+}
+.ki-bell:before {
+  content: "\e905";
+}
+.ki-calendar:before {
+  content: "\e906";
+}
+.ki-card:before {
+  content: "\e907";
+}
+.ki-cart:before {
+  content: "\e908";
+}
+.ki-chat:before {
+  content: "\e909";
+}
+.ki-checkbox-multiple:before {
+  content: "\e90a";
+}
+.ki-checkbox-off:before {
+  content: "\e90b";
+}
+.ki-checkbox-on:before {
+  content: "\e90c";
+}
+.ki-checkmark-circle:before {
+  content: "\e90d";
+}
+.ki-checkmark:before {
+  content: "\e90e";
+}
+.ki-chevron-down-circle:before {
+  content: "\e90f";
+}
+.ki-chevron-down:before {
+  content: "\e910";
+}
+.ki-chevron-left-circle:before {
+  content: "\e911";
+}
+.ki-chevron-left:before {
+  content: "\e912";
+}
+.ki-chevron-right-circle:before {
+  content: "\e913";
+}
+.ki-chevron-right:before {
+  content: "\e914";
+}
+.ki-chevron-up-circle:before {
+  content: "\e915";
+}
+.ki-chevron-up:before {
+  content: "\e916";
+}
+.ki-clock:before {
+  content: "\e917";
+}
+.ki-close-circle:before {
+  content: "\e918";
+}
+.ki-close:before {
+  content: "\e919";
+}
+.ki-collection:before {
+  content: "\e91a";
+}
+.ki-contract:before {
+  content: "\e91b";
+}
+.ki-delete:before {
+  content: "\e91c";
+}
+.ki-delivery-return:before {
+  content: "\e91d";
+}
+.ki-delivery:before {
+  content: "\e91e";
+}
+.ki-document:before {
+  content: "\e91f";
+}
+.ki-download:before {
+  content: "\e920";
+}
+.ki-drop-down:before {
+  content: "\e921";
+}
+.ki-drop-left:before {
+  content: "\e922";
+}
+.ki-drop-right:before {
+  content: "\e923";
+}
+.ki-drop-up:before {
+  content: "\e924";
+}
+.ki-email:before {
+  content: "\e925";
+}
+.ki-expand:before {
+  content: "\e926";
+}
+.ki-eye:before {
+  content: "\e927";
+}
+.ki-eye-hidden:before {
+  content: "\e940";
+}
+.ki-filters:before {
+  content: "\e941";
+}
+.ki-grid:before {
+  content: "\e928";
+}
+.ki-heart:before {
+  content: "\e929";
+}
+.ki-help:before {
+  content: "\e92a";
+}
+.ki-home:before {
+  content: "\e92b";
+}
+.ki-info:before {
+  content: "\e92c";
+}
+.ki-list-view:before {
+  content: "\e92d";
+}
+.ki-location:before {
+  content: "\e92e";
+}
+.ki-lock:before {
+  content: "\e92f";
+}
+.ki-menu:before {
+  content: "\e930";
+}
+.ki-minus:before {
+  content: "\e931";
+}
+.ki-phone:before {
+  content: "\e932";
+}
+.ki-plus:before {
+  content: "\e933";
+}
+.ki-printer:before {
+  content: "\e934";
+}
+.ki-quote:before {
+  content: "\e935";
+}
+.ki-radio-checked:before {
+  content: "\e936";
+}
+.ki-radio-unchecked:before {
+  content: "\e937";
+}
+.ki-search:before {
+  content: "\e938";
+}
+.ki-share:before {
+  content: "\e939";
+}
+.ki-star-filled:before {
+  content: "\e93a";
+}
+.ki-star-outlined:before {
+  content: "\e93b";
+}
+.ki-trade:before {
+  content: "\e93c";
+}
+.ki-user:before {
+  content: "\e93d";
+}
+.ki-warning-cirlce:before {
+  content: "\e93e";
+}
+.ki-warning:before {
+  content: "\e93f";
+}
+.ki-service_timber_merchant:before {
+  content: "\e952";
+}
+.ki-service_Collect:before {
+  content: "\e942";
+}
+.ki-service_Delivery:before {
+  content: "\e943";
+}
+.ki-service_Kitchen:before {
+  content: "\e944";
+}
+.ki-service_Bathroom:before {
+  content: "\e945";
+}
+.ki-service_Doors:before {
+  content: "\e946";
+}
+.ki-service_Flooring:before {
+  content: "\e947";
+}
+.ki-service_FreeParking:before {
+  content: "\e948";
+}
+.ki-Service_HomeOffice:before {
+  content: "\e949";
+}
+.ki-service_Insulation:before {
+  content: "\e94a";
+}
+.ki-service_Lanscaping:before {
+  content: "\e94b";
+}
+.ki-service_MechanicalOffLoad:before {
+  content: "\e94c";
+}
+.ki-service_ShowerPanel:before {
+  content: "\e94d";
+}
+.ki-service_Timber:before {
+  content: "\e94e";
+}
