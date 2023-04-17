@@ -63,7 +63,7 @@ const BreadCrumbs = (props: data) => {
           eventName={`Breadcrumbs`}
           rel="noopener noreferrer"
           > {crumb.name}</Link>
-          :<Link href={baseUrl + crumb.slug + ".html"}
+          :<Link href={baseUrl + crumb.slug}
           data-ya-track="Breadcrumbs"
           eventName={`Breadcrumbs`}
           rel="noopener noreferrer"

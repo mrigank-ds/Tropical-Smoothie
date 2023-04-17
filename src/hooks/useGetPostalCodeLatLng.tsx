@@ -39,7 +39,7 @@ const useGetPostalCodeLatLng = () => {
                 longitude: components.geometry.location.lng,
               };
               if (components.address_components[i].types.includes("country")) {
-                if (components.address_components[i].short_name != "GB") {
+                if (components.address_components[i].short_name != "US") {
                   status = true;
                 }
               }

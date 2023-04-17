@@ -458,7 +458,7 @@ const SearchLayout = (props: any): JSX.Element => {
 
                   {locationResults && locationResults.length <= 0 ? (
                     <div className="browse-dir">
-                      <a className="underline " href="/gb">
+                      <a className="underline " href="/us">
                         Use the search above or{" "}
                         <span className="font-second-main-font">
                           {" "}

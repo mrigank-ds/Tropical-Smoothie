@@ -125,18 +125,19 @@ const country: Template<TemplateRenderProps> = ({
     if (typeof entity.dm_directoryChildren != "undefined") {
       if (entity.dm_baseEntityCount == 1) {
         entity.dm_directoryChildren.map((res: any) => {
-
+          console.log(res,"Results");
           let detlslug1 = "";
 
           if (!res.slug) {
             let slugString = res.id + " " + res.name;
             let slug = slugString;
             detlslug1 = `${slug}`;
+            
           } else {
             detlslug1 = `${res.slug.toString()}`;
           }
           if (res.meta.entityType.id == 'ce_city') {
-            detlslug1 = "gb/" + detlslug1;
+            detlslug1 = detlslug1;
           } else {
             detlslug1 = detlslug1;
           }
@@ -166,14 +167,16 @@ const country: Template<TemplateRenderProps> = ({
     }
 
     return (
+      <>
       <li className=" storelocation-category">
         <a
           key={entity.slug}
-          href={stagingBaseurl + "/" + detlslug}
+          href={entity.slug}
         >
           {entity.name} ({entity.dm_baseEntityCount})
         </a>
       </li>
+      </>
     )
   }) : null;
 

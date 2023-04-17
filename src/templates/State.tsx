@@ -63,11 +63,11 @@ export const config: TemplateConfig = {
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   let url = "";
-  document.dm_directoryParents.map((i: any) => {
-    if (i.meta.entityType.id == 'ce_country') {
-      url += i.slug + "/";
-    }
-  });
+  // document.dm_directoryParents.map((i: any) => {
+  //   if (i.meta.entityType.id == 'ce_country') {
+  //     url += i.slug + "/";
+  //   }
+  // });
   url += document.slug.toString();
 
   return url;
@@ -145,12 +145,13 @@ const region: Template<TemplateRenderProps> = ({
 
         })
       } else {
-        detlslug = "gb/" + slug + "/" + constant.slugify(entity.slug);
+        detlslug = "us/" + slug + "/" + constant.slugify(entity.slug);
       }
 
     }
 
     return (
+      <>
       <li className=" storelocation-category">
         <a
           key={entity.slug}
@@ -159,6 +160,7 @@ const region: Template<TemplateRenderProps> = ({
           {entity.name} ({entity.dm_baseEntityCount})
         </a>
       </li>
+      </>
     )
   }) : null;
 

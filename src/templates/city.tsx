@@ -68,6 +68,7 @@ export const config: TemplateConfig = {
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   let url: any = ""
   document.dm_directoryParents.map((i: any) => {
+    console.log(i,"CityPage");
     if (i.meta.entityType.id == 'ce_country') {
       url = `${i.slug}`
     }
@@ -162,9 +163,9 @@ const City: Template<TemplateRenderProps> = ({
     const result: any = string.replaceAll(" ", "-");
     const finalresult: any = constant.slugify(result);
     if (!entity.slug) {
-      url = `/${entity.id}-${finalresult}`;
+      url = `${region}/${entity.id}-${finalresult}`;
     } else {
-      url = `/${constant.slugify(entity.slug)}`;
+      url = `${region}/${constant.slugify(entity.slug)}`;
     }
     const metersToMiles = (meters: number) => {
       const miles = meters * 0.000621371;
