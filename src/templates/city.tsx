@@ -73,7 +73,7 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
     //   url = `${i.slug}`
     // }
      if (i.meta.entityType.id == 'ce_region') {
-      url = `${url}/${document.slug.toString()}`
+      url = `${i.slug}/${document.slug.toString()}`
     }
   })
   return url;
