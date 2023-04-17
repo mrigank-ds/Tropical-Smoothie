@@ -145,7 +145,7 @@ const region: Template<TemplateRenderProps> = ({
 
         })
       } else {
-        detlslug = "us/" + slug + "/" + constant.slugify(entity.slug);
+        detlslug = slug + "/" + constant.slugify(entity.slug);
       }
 
     }

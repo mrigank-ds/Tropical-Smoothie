@@ -68,7 +68,7 @@ export const config: TemplateConfig = {
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   let url: any = ""
   document.dm_directoryParents.map((i: any) => {
-    console.log(i,"CityPage");
+    
     if (i.meta.entityType.id == 'ce_country') {
       url = `${i.slug}`
     }
