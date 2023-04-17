@@ -155,12 +155,6 @@ const City: Template<TemplateRenderProps> = ({
     
     // let key: any = Object.keys(entity.hours)[0];
     let url = "";
-    dm_directoryParents.map((i: any, index: any) => {
-      if (i.meta.entityType.id == 'ce_region') {
-        url=`${url}/${i.slug}/${document.slug.toString()}`
-        console.log(url,"urlnew")
-      }
-    });
     const name: any = entity.name.toLowerCase();
     const region: any = entity.address.region.toLowerCase();
     const initialregion: any = region.toString();
@@ -180,6 +174,7 @@ const City: Template<TemplateRenderProps> = ({
       const miles = meters * 0.000621371;
       return miles.toFixed(2);
     };
+    console.log(url,"url")
   
 
 
