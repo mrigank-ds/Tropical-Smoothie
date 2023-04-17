@@ -73,7 +73,7 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
     //   url = `${i.slug}`
     // }
      if (i.meta.entityType.id == 'ce_region') {
-      url = `${i.slug}/${document.slug.toString()}`
+      url = `${url}/${i.slug}/${document.slug.toString()}`
     }
   })
   return url;
@@ -166,9 +166,9 @@ const City: Template<TemplateRenderProps> = ({
     const result: any = string.replaceAll(" ", "-");
     const finalresult: any = constant.slugify(result);
     if (!entity.slug) {
-      url = `${region}/${city}/${finalresult}`;
+      url = `${city}/${finalresult}`;
     } else {
-      url = `${region}/${city}/${constant.slugify(entity.slug)}`;
+      url = `${city}/${constant.slugify(entity.slug)}`;
     }
     const metersToMiles = (meters: number) => {
       const miles = meters * 0.000621371;
